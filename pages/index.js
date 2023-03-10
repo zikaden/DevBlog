@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { Categories, PostCard, PostWidget } from "../components"
+import { Categories, PostCard, PostWidget, } from "../components"
+import { FeaturedPosts } from '@/sections';
 import { getPosts } from '../services';
 
 
@@ -10,6 +11,7 @@ export default function Home({ posts }) {
         <title>DevBlog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <FeaturedPosts />
       <div className="grid gird-cols-1 md:grid-cols-12 gap-12">
         <div className="col-span-1 md:col-span-8">
           {posts.map((post, index) => (

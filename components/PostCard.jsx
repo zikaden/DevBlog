@@ -7,6 +7,7 @@ import Link from "next/link"; 4
 const PostCard = ({ post }) => {
 
 
+
     return (
         <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
             <div className="relative overflow-hidden shadow-md pb-80 mb-6">
@@ -33,7 +34,7 @@ const PostCard = ({ post }) => {
             </div>
             <p className="text-center text-gray-700 text-lg px-4 font-normal md:p-4 mb-4">{post.excerpt}</p>
             <div className='text-center'>
-                <Link href={"post/${post.slug}"}>
+                <Link href={`/post/${post.slug}`}>
                     <span className='transtition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 font-medium text-white rounded-full text-lg px-8 py-3 cursor-pointer'>Continue Reading</span>
                 </Link>
             </div>
